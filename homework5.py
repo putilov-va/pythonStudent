@@ -7,4 +7,5 @@ print(immutable_var)
 print(type(tuple_))
 mutable_list = ['A', 'B', 'C']
 mutable_list[2] = 'F'
+mutable_list.append('Y')
 print(mutable_list)
