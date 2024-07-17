@@ -1,0 +1,7 @@
+my_string = input('Введите имя')
+print(len(my_string))
+print(my_string.upper())
+print(my_string.lower())
+print('Добрых дел'.replace(' ', ''), my_string.upper())
+print(my_string[0])
+print(my_string[-1])
