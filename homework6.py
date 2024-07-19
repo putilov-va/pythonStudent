@@ -1,10 +1,11 @@
 my_dict = {'Dima': 1980, 'Petya': 2001, 'Lena': 1997, 'Sergey': 1994}
 print('Список: ', my_dict)
 print(type(my_dict))
-print("Добавленное значение: ", my_dict['Lena'])
+print("Lena: ", my_dict['Lena'])
 a = my_dict['Katya'] = 2003
-print("Удалённое значение: ", a)
+print("Добавленное значение: ", a)
 my_dict.update({'Sonya': 2009, 'Maksim': 1991})
+print("Удалённое значение: ", my_dict.pop('Sergey'))
 print('Обновлённый список: ', my_dict)
 print('В списке? : ', my_dict.get('Boris'))
 print('"Work _____________ Set"')
