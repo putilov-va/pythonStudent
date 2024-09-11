@@ -32,12 +32,6 @@ class Figure:
         if self.__is_valid_color == True:
             self.__color = [r, g, b]
 
-    # def set_color(self):
-    #     color = self
-    #     self.__color = color
-    #     # if self.__is_valid_color == True:
-    #     #     self.__color = color
-
     def get_color(self):    # возвращает список RGB цветов
         return self.__color
 
@@ -126,33 +120,6 @@ print(cube1.get_volume())
 # #_______________________________________
 # #___________________________________
 # #___________________________________
-# import sympy as sy
-# def myformula(formula, **kwargs):
-#     expr = sy.sympify(formula)
-#     return expr.evalf(subs=kwargs)
-# print(myformula(x=2,y=2,z=1,formula="x+2*y/z"))
-# # 6.00000000000000
-# print(myformula(x=2,y=2,z=1,formula="sin(x+y-z)"))
-# # 0.141120008059867
-
-# import sympy
-# print(sympy.__version__)
-
-# def my_func(*args):
-#     try:
-#         result = eval(args[0])
-#     except SyntaxError:
-#         result = "Всё же самому нужно подумать"
-#     return result
-#
-#
-# print(my_func("1 + 9"))
-# print(my_func("100%"))
-# print(my_func("4**"))
-# print(my_func("9**3"))
-
-
-
 #___________________________________________
 
 # class Figure:
