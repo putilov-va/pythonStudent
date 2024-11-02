@@ -27,12 +27,13 @@ class Plant:                    # Растения
         self.name = name        # индивидуальное название каждого растения
 
 class Flower(Plant):           # Цветок
-
     def __init__(self, name):
-        self.name = name
+         super().__init__(name)
 
 class Fruit(Plant):             # Фрукт
-    edible = True               # Живой
+    def __init__(self, name):
+        super().__init__(name)
+        self.edible = True         # Живой
 
 #_________________________________________
 
