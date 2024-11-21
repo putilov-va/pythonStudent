@@ -21,7 +21,6 @@ some_object = SomeClass
 
 # some_class_method(value=some_string)
 # check_param(value=some_list)
-
 #---------------------------------------------------------
 
 # "ИНТРОСПЕКЦИЯ"
