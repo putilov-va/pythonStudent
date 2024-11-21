@@ -38,14 +38,15 @@ try:
     print(f'Значение объекта: {inspect.signature(may_object)}') # подпись вызываемого объекта
 except:
     pass
-print(f'объект является модулем: {inspect.ismodule(may_object)}') # Возвращает True, если объект является модулем
-print(f'объект является классом: {inspect.isclass(may_object)}') # Возвращает True, если объект является классом.
-print(f'объект является функцией: {inspect.isfunction(may_object)}') # Возвращает True, если объект является
+print(f'Объект является модулем: {inspect.ismodule(may_object)}') # Возвращает True, если объект является модулем
+print(f'Объект является классом: {inspect.isclass(may_object)}') # Возвращает True, если объект является классом.
+print(f'Объект является функцией: {inspect.isfunction(may_object)}') # Возвращает True, если объект является
                                             # функцией включая функции, созданные с помощью лямбда-выражений....
-print(f'объект является встроенной функцией '
+print(f'Объект является встроенной функцией '
       f'или связанным встроенным методом: {inspect.isbuiltin(may_object)}') # Возвращает True, если объект
                                     #  является встроенной функцией или связанным встроенным методом.
-print(f'объект является кодом: {inspect.isbuiltin(may_object)}') # Возвращает True, если объект является кодом
+print(f'Модуль объекта: {inspect.getmodule(may_object)}')  # фактический объект модуля для заданного объекта
+print(f'Объект является кодом: {inspect.isbuiltin(may_object)}') # Возвращает True, если объект является кодом
 
 print(f'Тип объекта: {type(may_object)}')
 
