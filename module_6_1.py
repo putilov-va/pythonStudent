@@ -8,17 +8,16 @@ class Animal:                    # Животные
     def eat(self, food):         # параметр, принимающий объекты классов растений
         if food.edible:
             print(f'{self.name} съел {food.name}')
-            Animal.fed = True
+            self.fed = True
         else:
             print(f'{self.name} не стал есть {food.name}')
-            Animal.alive = False
+            self.alive = False
 
 class Mammal(Animal):           # Млекопитающее
     pass
 
 class Predator(Animal):         # Хищник
     pass
-
 
 class Plant:                    # Растения
     edible = False              # съедобность
@@ -27,14 +26,13 @@ class Plant:                    # Растения
         self.name = name        # индивидуальное название каждого растения
 
 class Flower(Plant):           # Цветок
-    def __init__(self, name):
-         super().__init__(name)
+    edible = False              # съедобность
 
 class Fruit(Plant):             # Фрукт
+    Plant.edible = True         # Живой
+
     def __init__(self, name):
         super().__init__(name)
-        self.edible = True         # Живой
-
 #_________________________________________
 
 a1 = Predator('Волк с Уолл-Стрит')
