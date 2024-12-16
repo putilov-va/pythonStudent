@@ -55,8 +55,8 @@ cursor.execute('CREATE INDEX IF NOT EXISTS idx_email ON Users (email)')
 # #  запроса и позволяет нам работать с ними как с массивом.
 # '''  Применять 'fetchone()' или 'fetchall()' — это ключ к успешной работе
 #     с базами данных и эффективному управлению полученной информацией'''
-
-'''10) Баланс всех пользователей по "balance"'''
+# 
+# ''' Баланс всех пользователей по "balance"'''
 # cursor.execute('SELECT SUM (balance) FROM Users')
 # balances = cursor.fetchone()[0]
 # print( balances / total_id)  # средний баланс всех пользователей
