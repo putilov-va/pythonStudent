@@ -17,17 +17,17 @@ dp = Dispatcher(bot, storage=MemoryStorage())
 
 '''Инициализация инлайн клавиатуры каталога'''
 ccal_ikb= InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text='Рассчитать норму калорий', callback_data='calories')],
-    [InlineKeyboardButton(text='Формулы расчёта', callback_data='formulas')],
-    [InlineKeyboardButton(text='Вернутся', callback_data='back')]
+    [InlineKeyboardButton(text='Рассчитать норму калорий', callback_data='calories'),
+    InlineKeyboardButton(text='Формулы расчёта', callback_data='formulas'),
+    InlineKeyboardButton(text='Вернутся', callback_data='back')]
     ]
 )         # инициализация инлайн клавиатуры
 
 catalog_ikb = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text='Product 1', callback_data='product_buying')],
-    [InlineKeyboardButton(text='Product 2', callback_data='product_buying')],
-    [InlineKeyboardButton(text='Product 3', callback_data='product_buying')],
-    [InlineKeyboardButton(text='Product 4', callback_data='product_buying')],
+    [InlineKeyboardButton(text='Product 1', callback_data='product_buying'),
+    InlineKeyboardButton(text='Product 2', callback_data='product_buying'),
+    InlineKeyboardButton(text='Product 3', callback_data='product_buying'),
+    InlineKeyboardButton(text='Product 4', callback_data='product_buying')],
     [InlineKeyboardButton(text='Вернутся', callback_data='back')]
     ]
 )         # инициализация инлайн клавиатуры
