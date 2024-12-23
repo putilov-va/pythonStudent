@@ -10,7 +10,7 @@ import asyncio
 import logging
 
 
-api = "8141485832:AAF6UoDN1lQ9PcBsyHh1z3AqgY0P-yMcQLs"
+api = ""
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
