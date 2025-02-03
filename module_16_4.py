@@ -35,7 +35,7 @@ async def create_id(username: str, age: int) -> str:
     new_id = max((i.id for i in users), default=0) + 1  #  Создаём индекс
     new_user = User(id=new_id, username=username, age=age)  # Конфигурация списка (база)
     users.append(new_user)
-    return f'Добавлен {new_id} пользователь.'
+    return f'"Добавлен {new_id} пользователь."'
 
 
 '''Обновление данных записи.'''
@@ -51,7 +51,7 @@ async def update_id(id: int, username: str, age: int) -> set:
 
 
 @app.delete('/user/{user_id}')
-async def dict_page(id: int):
+async def dict_page(id: int) -> str:
     '''Подсчёт количества итераций списка'''
     calls = 0
     for i in list(users):
@@ -60,5 +60,5 @@ async def dict_page(id: int):
             # try:
             if key == 'id' and value == id:
                 del users[calls - 1]
-                return {f'Delet: {id}'}
+                return f'"Delet: {id}"'
     raise HTTPException(status_code=404, detail="User was not found")
