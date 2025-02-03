@@ -9,13 +9,13 @@ app = FastAPI()
 
 # Определение базового маршрута
 @app.get("/")
-async def main_page() -> dict:
-    return {'message': 'Главная страница'}
+async def main_page() -> str:
+    return "Главная страница"
 
 '''GET-запрос — маршрут к страницe администратора'''
 @app.get('/user/admin')
-async def user_page() -> dict:
-    return {'message': 'Вы вошли как администратор'}
+async def user_page() -> str:
+    return "Вы вошли как администратор"
 
 '''GET-запрос — маршрут к страницам пользователей: Имя: <username>, Возраст: <age>.
     вводить типа ->  user?username=Vovan&age=55'''
@@ -29,9 +29,9 @@ async def user_info(username: Annotated[str, Path(min_length=5,
                                                  le=120,
                                                  description="Enter age",
                                                  example=24)]
-                    ) -> dict:
+                    ) -> str:
 
-    return {'messege': f"Информация о пользователе. Имя: <{username}>, Возраст: <{age}>"}
+    return f"Информация о пользователе. Имя: {username}, Возраст: {age}"
 
 '''GET-запрос — маршрут к страницe пользователя'''
 @app.get("/user/{user_id}")
@@ -39,5 +39,5 @@ async def user_page(user_id: Annotated[int, Path(ge=1,
                                                  le=100,
                                                  description="Enter User ID",
                                                  example=1)]
-                    ):
-    return {'message': f"Вы вошли как пользователь № <{user_id}>"}
+                    ) -> str:
+    return f"Вы вошли как пользователь № {user_id}"
